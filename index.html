@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exercice 4</title>
+</head>
+<body>
+  <form>
+    <label for="nom">Votre nom  : </label><input type="text" name="nom" value="Doe" id="nom" />
+    <label for="prenom">Votre prenom  : </label><input type="text" name="prenom" value="John" id="prenom" />
+    <label for="ville">Votre ville  : </label><input type="text" name="ville" value="New York" id="ville" />
+    <button type="button" name="button">RAZ</button>
+  </form>
+  <script>
+  //Dans le fichier HTML fourni, faire que le bouton RAZ efface les données des champs du formulaire.
+ var button = document.querySelector("button");  //appel mon bouton
+
+  button.addEventListener("click", function(){
+     var username = document.getElementById("prenom");  // appel de ma variable prenom
+     var city = document.getElementById("ville");// appel de ma variable ville
+     var name = document.getElementById("nom");  // appel de ma variable nom
+    name.value = "";  // pour effacer la value
+    username.value = "";
+    city.value = "";
+  });
+  </script>
+</body>
+</html>
